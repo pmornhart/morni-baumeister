@@ -1,0 +1,97 @@
+# Morni Baumeister – Einstellungen. Nach Änderungen: /baumeisteradmin neuladen (oder Server neu starten).
+# Gilt für die nächste Runde; eine laufende Runde spielt mit den alten Werten zu Ende.
+
+# Zurück ins Spiel: Verliert jemand mitten in einer Runde die Verbindung (zum Beispiel, weil das Spiel abstürzt), bleibt
+# seine Parzelle so viele Sekunden für ihn frei. Kommt er rechtzeitig wieder (direkt oder über „Zurück ins Spiel“ in
+# der Lobby), baut er dort weiter, wo er aufgehört hat; sonst ist er raus und sein Bau wird nicht bewertet.
+# 0 = aus (0–600).
+rueckkehr-sekunden: 90
+
+# Eigene leere Welt für die Bauhütte und die Bauplätze (wird beim ersten Start angelegt und gebaut).
+welt: baumeister
+
+bauhuette:
+  # So lange läuft der Countdown in der Bauhütte, bevor eine Runde startet (3–300).
+  # Sagen alle „bereit“, geht es nach 5 Sekunden los.
+  countdown-sekunden: 30
+  # Ab so vielen Leuten beginnt der Countdown von selbst (2–16; sonst, sobald jemand „bereit“ ist).
+  # Gespielt wird ab zwei Leuten.
+  mindestens-spieler: 3
+
+spielarten:
+  # Schnelle Runde (kurze Bauzeit) zur Wahl stellen?
+  schnell: true
+  # Zu zweit bauen (Paare, Partys zuerst zusammen) zur Wahl stellen? Braucht mindestens vier Leute.
+  paare: true
+
+runde:
+  # Höchstens so viele Leute in einer Runde (2–16). Mehr warten auf die nächste (zwei Runden können gleichzeitig laufen).
+  hoechstens-spieler: 16
+  # Themen-Wahl: drei Vorschläge, die Mehrheit gewinnt (false = das Thema wird ausgelost).
+  themenwahl: true
+  # So lange dauert die Themen-Wahl (5–60 Sekunden).
+  themenwahl-sekunden: 15
+  # Bauzeit in Sekunden (60–1800), klassisch …
+  bauzeit-sekunden: 300
+  # … und in der schnellen Runde (30–900).
+  schnell-bauzeit-sekunden: 120
+  # So lange hat jeder Zeit, einen Bau zu bewerten (5–60 Sekunden je Parzelle).
+  bewertung-sekunden: 15
+  # So lange dauert die Siegerehrung am Podest, dann geht es zurück in die Bauhütte (5–60 Sekunden).
+  siegerehrung-sekunden: 15
+
+parzelle:
+  # Größe der Baufläche (16–40 Blöcke, gerade Zahl). Ändert man sie, werden die Bauplätze beim nächsten Start neu gebaut.
+  groesse: 28
+  # So hoch darf gebaut werden (16–64 Blöcke über dem Boden).
+  hoehe: 40
+
+werkzeug:
+  # Füllen, Ersetzen, Leeren: höchstens so viele Blöcke auf einmal (16–32768) …
+  hoechstens-bloecke: 4096
+  # … und so lange Pause zwischen zwei Aufrufen (0–30 Sekunden).
+  pause-sekunden: 2
+
+schutz:
+  # Höchstens so viele Wesen je Parzelle (Tiere, Rüstungsständer, Rahmen, Bilder, Loren, Boote; 0–64).
+  # Tiere stehen still (keine KI), Endermänner, Wither und Drachen gibt es nicht.
+  wesen: 12
+  # Höchstens so viele gesetzte Wasser- und Lavaquellen je Parzelle (0–256). Flüssigkeiten fließen nie hinaus.
+  fluessigkeiten: 24
+  # Redstone: höchstens so viele Schaltvorgänge je Sekunde und Parzelle (0 = keine Grenze, sonst 10–1000). Wer drei
+  # Sekunden hintereinander darüber liegt (Redstone-Uhr), dessen Bauteil wird abgebaut.
+  redstone-pro-sekunde: 60
+  # Links und Adressen auf Schildern, Namensschildern und umbenannten Dingen sperren?
+  links-sperren: true
+  # Gesperrte Wörter auf Schildern, Namensschildern und umbenannten Dingen (wie im Netzwerk-Chat; Groß/klein egal,
+  # „4rsch“ zählt wie „arsch“). Leere Liste = keine Wortsperre.
+  gesperrte-woerter:
+    - arsch
+    - wichser
+    - hurensohn
+    - hure
+    - fotze
+    - schlampe
+    - missgeburt
+    - spast
+    - mongo
+    - schwuchtel
+    - kanake
+    - neger
+    - nigger
+    - nazi
+    - hitler
+    - fick
+    - fuck
+    - shit
+    - bitch
+    - cunt
+    - faggot
+    - retard
+    - whore
+  # Wörter, in denen ein gesperrtes Stück nicht zählt (z. B. der Fisch „Barsch“, der „Marsch“, die „Mongolei“).
+  erlaubte-woerter:
+    - barsch
+    - marsch
+    - harsch
+    - mongolei
