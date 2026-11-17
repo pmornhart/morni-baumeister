@@ -53,6 +53,22 @@ die Bauten der anderen (1–5 Sterne); der beste Bau bekommt den Meisterbrief. K
   Spielerdaten, Bestenliste, config.yml = Vorgaben, Texte, Baupläne nur mit 26.x-Blöcken). Übersetzt gegen Paper 26.3
   und 26.1.
 - Neubau der Welt ≈ 940 000 Blöcke in 100 s (auf dem ausgelasteten Rechner).
+- Echter Test (`FRESH=1 test/run.sh`, Paper 26.1.2 + Test-Netzwerk, sechs Test-Spieler, zwei Runden): **89/89**,
+  Server-Log ohne Fehler – Bauhütte, Abstimmung (Menü, Befehl, englisch), Countdown ab 3, Themen-Wahl (Fenster,
+  Schnellleiste, Befehl; Mehrheit), Bauen nur auf der eigenen Parzelle, Rand gesperrt, zurück in die Mitte, Zollstock,
+  Füllen/Rückgängig/zu groß, Boden, Uhrzeit, Wetter, Köpfe, Banner, TNT, Schild mit Schimpfwort, Wasser- und
+  Wesen-Grenze, kein Drache, Wasser fließt nicht hinaus, Dauer-Redstone abgebaut, Verbindung weg und rechtzeitig
+  zurück, Bewertung (nur bebaute Parzellen, eigener Bau nicht, früher weiter, wenn alle bewertet haben), Siegerehrung
+  (Platz, Titel, Meisterbrief, Podest), Netzwerk-Statistik, Aufräumen, `/top`; zu zweit zu fünft (Party als Paar,
+  Thema per Verwaltung, Zuschauer, zu spät zurück → Bau nicht bewertet, Partner bewertet nicht), Lobby-Knopf.
+- Gefunden beim echten Test: Zollstock und Eimer brauchen Reichweite (Test geht näher heran); eine Redstone-Uhr, deren
+  Strom nur „festgehalten“ wurde, löste keine Ereignisse mehr aus und lief unbemerkt weiter → jetzt wird der Strom auf
+  aus gesetzt, so zählt jeder Takt weiter, und nach drei Sekunden wird abgebaut (samt Beobachtern, Verstärkern …
+  daneben). Bei der Siegerehrung standen alle Zuschauer auf einem Punkt → Reihen nebeneinander. „Rezept
+  freigeschaltet“-Hinweise im Kreativmodus abgeschaltet. Mehrzahl-Texte („1 Bauten“) umformuliert.
+- Bilder mit echtem Client 26.3 (über ViaVersion, nur lokal unter `~/mm-cache/bilder-baumeister/`): Bauhütte (vorn,
+  von oben, mit Leiste), Themen-Wahl, Almhütte auf der Parzelle, Bauplatz von oben, Bauen mit Leiste, Werkzeugkiste,
+  Bewertung (eigener Bau, fremder Bau mit Wolle 1–5), Meisterbrief, Siegerehrung vom Podest.
 
 ## Offen
 

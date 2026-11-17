@@ -324,7 +324,7 @@ async function main() {
   const theme = g.options[0].id;
   await cmd('baumeisteradmin vorspulen weiter');
   check('Die Mehrheit gewinnt: Thema steht fest', await waitFor(async () => (await game()).phase === 'BUILD', 4000) &&
-    (await game()).thema === theme && await waitFor(() => sees(anna, /Das Thema ist .* \(3 Stimmen\)/), 2000), theme);
+    (await game()).thema === theme && await waitFor(() => sees(anna, /Das Thema ist .* \(Stimmen: 3\)/), 2000), theme);
   check('Bauen: Kreativmodus, Zollstock und Werkzeugkiste', await waitFor(() => anna.game.gameMode === 'creative' &&
     slot(anna, 7)?.name === 'blaze_rod' && slot(anna, 8)?.name === 'nether_star', 3000),
   `${anna.game.gameMode} ${slot(anna, 7)?.name} ${slot(anna, 8)?.name}`);

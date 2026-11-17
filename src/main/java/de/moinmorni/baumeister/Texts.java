@@ -143,8 +143,8 @@ public final class Texts {
         t("menu.theme.mine", "<em>✔ Deine Stimme</em>", "<em>✔ Your vote</em>");
         t("theme.voted", "<gray>Deine Stimme: <au><theme></au>.</gray>", "<gray>Your vote: <au><theme></au>.</gray>");
         t("theme.not-now", "<gray>Gerade wird kein Thema gewählt.</gray>", "<gray>No theme is being chosen right now.</gray>");
-        t("theme.chosen", "<gray>Das Thema ist <au><theme></au> (<white><votes></white> Stimmen).</gray>",
-                "<gray>The theme is <au><theme></au> (<white><votes></white> votes).</gray>");
+        t("theme.chosen", "<gray>Das Thema ist <au><theme></au> (Stimmen: <white><votes></white>).</gray>",
+                "<gray>The theme is <au><theme></au> (votes: <white><votes></white>).</gray>");
 
         // ---------- Bauen ----------
         t("game.build.title", "<au><theme></au>", "<au><theme></au>");
@@ -160,9 +160,9 @@ public final class Texts {
 
         // ---------- Bewerten ----------
         t("game.rate.title", "<au>Bewertung</au>", "<au>Rating</au>");
-        t("game.rate.sub", "<gray><n> Bauten – gebt jedem 1 bis 5 Sterne</gray>", "<gray><n> builds – give each 1 to 5 stars</gray>");
-        t("game.rate.start", "<gray>Die Zeit ist um! Jetzt schauen wir uns <white><n></white> Bauten an. Wertung mit der Wolle in der Schnellleiste (Rechtsklick) oder <white>/bewerten 1–5</white>.</gray>",
-                "<gray>Time's up! Now let's look at <white><n></white> builds. Rate with the wool in your hotbar (right-click) or <white>/rate 1–5</white>.</gray>");
+        t("game.rate.sub", "<gray>Gebt jedem Bau 1 bis 5 Sterne (<n> insgesamt)</gray>", "<gray>Give each build 1 to 5 stars (<n> in total)</gray>");
+        t("game.rate.start", "<gray>Die Zeit ist um! Jetzt geht's der Reihe nach zu jedem Bau (<white><n></white> insgesamt). Wertung mit der Wolle in der Schnellleiste (Rechtsklick) oder <white>/bewerten 1–5</white>.</gray>",
+                "<gray>Time's up! Now we visit every build in turn (<white><n></white> in total). Rate with the wool in your hotbar (right-click) or <white>/rate 1–5</white>.</gray>");
         t("game.rate.nothing", "<gray>Niemand hat etwas gebaut – diesmal gibt es nichts zu bewerten.</gray>",
                 "<gray>Nobody built anything – there's nothing to rate this time.</gray>");
         t("game.rate.plot", "<au>Bau <pos> von <of></au>", "<au>Build <pos> of <of></au>");
@@ -189,8 +189,8 @@ public final class Texts {
 
         // ---------- Siegerehrung ----------
         t("award.head", "<au>Siegerehrung</au> <gray>– Thema „<theme>“:</gray>", "<au>Award ceremony</au> <gray>– theme “<theme>”:</gray>");
-        t("award.row", "<au><pos>.</au> <white><name></white> <gray>– <au><stars> ★</au> (<votes> Stimmen)</gray>",
-                "<au><pos>.</au> <white><name></white> <gray>– <au><stars> ★</au> (<votes> votes)</gray>");
+        t("award.row", "<au><pos>.</au> <white><name></white> <gray>– <au><stars> ★</au> (Stimmen: <votes>)</gray>",
+                "<au><pos>.</au> <white><name></white> <gray>– <au><stars> ★</au> (votes: <votes>)</gray>");
         t("award.mine", "<gray>Dein Bau: Platz <au><pos></au> von <white><of></white> mit <au><stars> ★</au> (<white><fives></white>× Meisterwerk).</gray>",
                 "<gray>Your build: place <au><pos></au> of <white><of></white> with <au><stars> ★</au> (<white><fives></white>× masterpiece).</gray>");
         t("award.none", "<gray>Diesmal gibt es keinen Sieger – es wurde nichts bewertet.</gray>",
@@ -202,8 +202,8 @@ public final class Texts {
         t("award.sub", "<gray>baut das schönste „<theme>“</gray>", "<gray>built the best “<theme>”</gray>");
         t("letter.title", "Meisterbrief", "Master's certificate");
         t("letter.author", "Bauhütte MoinMorni", "MoinMorni Builders' Lodge");
-        t("letter.page", "<dark_green><b>Meisterbrief</b></dark_green>\n\n<black>Hiermit wird</black>\n<dark_blue><b><name></b></dark_blue>\n<black>zum Baumeister ernannt.</black>\n\n<gray>Thema:</gray> <black><theme></black>\n<gray>Wertung:</gray> <black><stars> ★ (<votes> Stimmen)</black>\n\n<gray><date> · Bauhütte MoinMorni</gray>",
-                "<dark_green><b>Master's Certificate</b></dark_green>\n\n<black>This certifies that</black>\n<dark_blue><b><name></b></dark_blue>\n<black>is a master builder.</black>\n\n<gray>Theme:</gray> <black><theme></black>\n<gray>Rating:</gray> <black><stars> ★ (<votes> votes)</black>\n\n<gray><date> · MoinMorni Builders' Lodge</gray>");
+        t("letter.page", "<dark_green><b>Meisterbrief</b></dark_green>\n\n<black>Hiermit wird</black>\n<dark_blue><b><name></b></dark_blue>\n<black>zum Baumeister ernannt.</black>\n\n<gray>Thema:</gray> <black><theme></black>\n<gray>Wertung:</gray> <black><stars> ★ (Stimmen: <votes>)</black>\n\n<gray><date> · Bauhütte MoinMorni</gray>",
+                "<dark_green><b>Master's Certificate</b></dark_green>\n\n<black>This certifies that</black>\n<dark_blue><b><name></b></dark_blue>\n<black>is a master builder.</black>\n\n<gray>Theme:</gray> <black><theme></black>\n<gray>Rating:</gray> <black><stars> ★ (votes: <votes>)</black>\n\n<gray><date> · MoinMorni Builders' Lodge</gray>");
         t("letter.chat", "<au>Dein Meisterbrief</au> <gray>liegt in der Schnellleiste – Rechtsklick zum Lesen.</gray>",
                 "<au>Your master's certificate</au> <gray>is in your hotbar – right-click to read it.</gray>");
 

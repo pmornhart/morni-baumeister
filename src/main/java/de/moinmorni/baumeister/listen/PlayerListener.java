@@ -185,6 +185,14 @@ public final class PlayerListener implements Listener {
         }
     }
 
+    /** Keine „Rezept freigeschaltet“-Hinweise beim Bauen. */
+    @EventHandler(ignoreCancelled = true)
+    public void onRecipe(org.bukkit.event.player.PlayerRecipeDiscoverEvent e) {
+        if (e.getPlayer().getWorld() == plugin.world()) {
+            e.setCancelled(true);
+        }
+    }
+
     @EventHandler(ignoreCancelled = true)
     public void onFood(FoodLevelChangeEvent e) {
         if (e.getEntity() instanceof Player p && p.getWorld() == plugin.world()) {

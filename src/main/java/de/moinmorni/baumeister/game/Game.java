@@ -285,8 +285,16 @@ public final class Game {
     }
 
     private Location audience() {
-        return new Location(world(), PlotGrid.arenaX(arena) + 0.5, PlotGrid.FLOOR_Y + 1,
-                PlotGrid.PODIUM_Z + ArenaPlan.AUDIENCE + 0.5, 180f, -10f);
+        return audience(0);
+    }
+
+    /** Zuschauerplatz vor dem Podest: Reihen zu sieben, nebeneinander (niemand steht im anderen). */
+    private Location audience(int i) {
+        int col = i % 7;
+        int row = i / 7;
+        double x = (col % 2 == 0 ? col / 2 : -(col + 1) / 2) * 1.5;
+        return new Location(world(), PlotGrid.arenaX(arena) + 0.5 + x, PlotGrid.FLOOR_Y + 1,
+                PlotGrid.PODIUM_Z + ArenaPlan.AUDIENCE + 0.5 + row * 1.5, 180f, -10f);
     }
 
     // ---------------------------------------------------------------- Ausrüstung
@@ -668,7 +676,7 @@ public final class Game {
             sendStats(b, new PlayerData.Round(won, podium, points, given, fives, b.blocks(), score));
         }
         List<Scoring.Result> ranked = results.stream().filter(r -> rateOrder.contains(r.plot())).toList();
-        Location audience = audience();
+        int seat = 0;
         for (Player p : everyone()) {
             p.closeInventory();
             p.getInventory().clear();
@@ -680,7 +688,7 @@ public final class Game {
             p.resetPlayerTime();
             p.setPlayerTime(6000L, false);
             p.setPlayerWeather(WeatherType.CLEAR);
-            p.teleport(audience);
+            p.teleport(audience(seat++));
         }
         // Podest: Plätze 1–3 (geteilte Plätze stehen nebeneinander).
         for (Scoring.Result r : ranked) {
